@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap{
+            width: 200px;
+            height: 200px;
+           /* border: solid 1px black;*/
+            perspective: 800px;
+            position: relative;
+            margin: auto;
+            margin-top: 260px;
+            margin-left: 400px;
+        }
+        #di{
+            width: 200px;
+            height: 200px;
+           /* border: solid 1px black;*/
+           transform-style: preserve-3d;
+            position: absolute;
+        }
+        #wrap #di div{
+            width: 200px;
+            height: 200px;
+            border: solid 1px black;
+            position: absolute;
+        }
+        #wrap #di .left{
+            transform: translateX(-200px) rotateY(90deg);
+            transform-origin: right;
+        }
+        #wrap #di .right{
+            transform: translateX(200px) rotateY(-90deg);
+            transform-origin: left;
+        }
+        #wrap #di .top{
+            transform: translateY(-200px) rotateX(-90deg);
+            transform-origin: bottom;
+        }
+        #wrap #di .bottom{
+               transform: translateY(200px) rotateX(90deg);
+               transform-origin: top;
+           }
+        #wrap #di .front{
+            transform: translateZ(200px);
+        }
+        #wrap #di:hover{
+            transform:rotateY(360deg);
+            transition: 5s;
+        }
+
+
+
+    </style>
+</head>qq
+<body>
+<div id="wrap">
+    <div id="di">
+        <div class="top">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+        <div class="bottom">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+        <div class="left">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+        <div class="right">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+        <div class="front">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+        <div class="after">
+            <img src="img/萌叔.jpg" alt="图片" width="200" height="200">
+        </div>
+    </div>
+</div>
+</body>
+</html>
