@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/iconfont.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #wrap {
+            height: 100%;
+            width: 100%;
+        }
+
+        html body .iconfont {
+            font-size: 30px;
+        }
+
+        .top {
+            height: 50px;
+            border: solid 1px black;
+            font-size: 30px;
+            line-height: 50px;
+            background-color: #aaaaaa;
+        }
+
+        #wrap .top .time {
+            width: 200px;
+            float: left;
+        }
+
+        #wrap .top .icons {
+            width: 170px;
+            float: right;
+        }
+
+        .titiles {
+            height: 60px;
+            border: solid 1px black;
+            background-color: #aaaaaa;
+        }
+
+        .titiles .tit_content {
+            width: 200px;
+            font-size: 25px;
+            line-height: 60px;
+            float: left;
+            padding-left: 10px;
+
+        }
+
+        .iconss {
+            float: right;
+            height: 60px;
+            line-height: 70px;
+        }
+
+        @keyframes dianchi {
+            from {
+                width: 0px;
+            }
+            to {
+                width: 25px;
+            }
+        }
+       .dianchi{
+           width: 30px;
+           height: 10px;
+           border:solid 1px red;
+           animation: dianchi 1s  infinite;
+         background-color: green;
+       }
+
+        ul {
+
+            list-style: none;
+            height: 485px;
+            overflow: scroll;
+        / / 滚动条
+
+        }
+
+        #wrap ul li {
+            height: 60px;
+            border-bottom: solid 1px red;
+
+        }
+
+        .manager {
+            display: flex;
+            height: 65px;
+            /*border: solid 1px red;*/
+         background-color: #666666;
+
+        }
+
+        #wrap .manager div {
+            flex: 1;
+            /*border: solid 1px black;*/
+          /*background-color: crimson;*/
+        }
+
+        .a {
+            margin-left: 40px;
+        }
+
+        /* #wrap .a3{
+             width:420px ;
+             height: 490px;
+           !*  border: solid 1px red;*!
+         }*/
+        .d1 {
+            width: 150px;
+            height: 300px;
+            background-color: #fff000;
+            position: absolute;
+            right: 1px;
+            top: 114px;
+            display: none;
+            /*opacity: 0.9;*/
+        }
+
+        .titiles .weilei:hover .d1 {
+            display: block;
+            background-color: darkgrey;
+        }
+
+        /*.titiles .iconss a{*/
+        /*text-decoration: none;*/
+        /*color: black;*/
+        /*}*/
+        .titiles .iconss .d1 ul li {
+            height: 60px;
+            width: 150px;
+        }
+
+        .ccc {
+            position: absolute;
+            top: -5px;
+            right: 54px;
+        }
+
+        .ccc1 {
+            position: absolute;
+            top: 55px;
+            right: 54px;
+        }
+
+        .ccc2 {
+            position: absolute;
+            top: 115px;
+            right: 70px;
+        }
+
+        .ccc3 {
+            position: absolute;
+            top: 175px;
+            right: 70px;
+        }
+
+        .ccc4 {
+            position: absolute;
+            top: 235px;
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="top">
+        <div class="time">AM10:10</div>
+        <div class="icons">
+           <!-- &#xe696;-->
+            <span class="iconfont ">&#xe600;</span>
+            <span class="iconfont ">&#xeb07;</span>
+            <span class="iconfont ">&#xe607;</span>
+            <span class="iconfont ">
+            <div class="dianchi" style="position: absolute ;left: 325px ;top: 20px"></div>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="titiles">
+    <div class="tit_content">微信</div>
+    <div class="iconss">
+        <span class="iconfont" style="position: relative;left: -65px;top: -2px">&#xe637;</span>
+        <div class="weilei">
+            <span class="iconfont" style="position: relative;left: -25px;top: -79px">&#xe611;</span>
+            <div class="d1">
+                <ul>
+                    <li>
+                        <span class="iconfont " style="line-height: 60px">&#xe61f;</span>
+                        <span class="ccc">发起群聊</span>
+                    </li>
+                    <li>
+                        <span class="iconfont " style="line-height: 60px">&#xe611;</span>
+                        <span class="ccc1">添加朋友</span>
+
+                    </li>
+                    <li>
+                        <span class="iconfont " style="line-height: 60px">&#xe60c;</span>
+                        <span class="ccc2">扫一扫</span>
+                    </li>
+                    <li>
+                        <span class="iconfont " style="line-height: 60px">&#xe61e;</span>
+                        <span class="ccc3">收付款</span>
+                    </li>
+                    <li>
+                        <span class="iconfont " style="line-height: 60px">&#xe61a;</span>
+                        <span class="ccc4">帮忙与反馈</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<ul>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey ">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="img/萌叔.jpg" alt="图片" width="40px" height="40px"
+                 style="float: left ;position: relative;top: 5px;left: 10px">
+            <div style="float: left ;padding-top: 5px;padding-left: 40px">萌叔</div>
+            <div style=" padding-top: 30px ; position: relative;left: 40px ;font-size: 10px ;color: darkgrey">哈喽</div>
+            <div style="position: relative;top: -35px ;left: 260px;font-size: 10px;color: darkgrey">晚上10：00</div>
+        </div>
+    </li>
+</ul>
+
+<div class="manager">
+    <div>
+        <span class="iconfont a" style="margin-right:20px">&#xe62b;</span><br>
+        <span style="margin-left: 40px">
+               <a href="weixinjiemian.html" style="text-decoration: none ">微信</a>
+           </span>
+    </div>
+    <div>
+        <span class="iconfont a">&#xe6c2;</span><br>
+        <span style="margin-left: 35px">
+                 <a href="weixinjiemian2.html" style="text-decoration: none">通讯录</a>
+            </span>
+    </div>
+    <div><span class="iconfont a">&#xe746;</span>
+        <br><span style="margin-left: 38px">
+                <a href="weixingyemian3.html" style="text-decoration: none">发现</a>
+            </span>
+    </div>
+    <div><span class="iconfont a">&#xe626;</span><br>
+        <span style="margin-left: 45px">
+                <a href="weixingyemian4.html" style="text-decoration: none">我</a>
+            </span>
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
