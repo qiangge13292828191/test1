@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [type=button]{
+            width: 40px;
+            height:30px;
+        }
+        [type=text]{
+            height: 50px;
+            width: 166px;
+           text-align: right;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<from action="">
+    <input type="text" id="input"><br>
+    <input type="button" value="1" onclick="num(1)">
+    <input type="button" value="2" onclick="num(2)">
+    <input type="button" value="3" onclick="num(3)">
+    <input type="button" value="+" onclick="fuhao('+')"><br>
+    <input type="button" value="4" onclick="num(4)">
+    <input type="button" value="5" onclick="num(5)">
+    <input type="button" value="6" onclick="num(6)">
+    <input type="button" value="-" onclick="fuhao('-')"><br>
+    <input type="button" value="7" onclick="num(7)">
+    <input type="button" value="8" onclick="num(8)">
+    <input type="button" value="9" onclick="num(9)">
+    <input type="button" value="*" onclick="fuhao('*')"><br>
+    <input type="button" value="c" onclick="clearValue()">
+    <input type="button" value="0" onclick="num(0)">
+    <input type="button" value="/" onclick="fuhao('/')">
+    <input type="button" value="=" onclick="print()"><br>
+</from>
+<script>
+    var shuru= document.getElementById("input");
+    var berfore;
+    var after;
+    var fu;
+    function print() {
+        after=parseInt(shuru.value)
+        switch (fu) {
+            case'+':
+                shuru.value=berfore+after
+                break
+            case'-':
+                shuru.value=berfore-after
+                break
+            case'*':
+                shuru.value=berfore*after
+                break
+            case'/':
+                shuru.value=berfore/after
+                break
+        }
+    }
+    function fuhao(f) {
+        fu=f
+        berfore=parseInt(shuru.value)
+        clearValue()
+        console.log(berfore)
+        console.log(fu)
+    }
+    //清空
+    function clearValue() {
+        shuru.value=""
+    }
+    function num(n) {
+        shuru.value+=n;
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
