@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #wrap{
+            width: 200px;
+            height: 200px;
+            border:solid 1px black;
+            perspective: 800px;
+            position: relative;
+
+        }
+        #wrap #inner{
+            width: 200px;
+            height: 200px;
+            border:solid 1px black;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateX(-20deg);
+        }
+        #wrap #inner div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        #wrap #inner div:nth-child(1){
+            background-image: url("img/mmm1.jpg");
+        }
+        #wrap #inner div:nth-child(2){
+            background-image: url("img/mmm2.jpg");
+        }
+        #wrap #inner div:nth-child(3){
+            background-image: url("img/mmm3.jpg");
+        }
+        #wrap #inner div:nth-child(4){
+            background-image: url("img/mmm4.jpg");
+        }
+        #wrap #inner div:nth-child(5){
+            background-image: url("img/mmm5.jpg");
+        }
+        #wrap #inner div:nth-child(6){
+            background-image: url("img/mmm6.jpg");
+        }
+       /* #wrap #inner div:nth-child(7){
+            background-image: url("img/yemian1.jpg");
+        }
+        #wrap #inner div:nth-child(8){
+            background-image: url("img/yemian2.jpg");
+        }
+        #wrap #inner div:nth-child(9){
+            background-image: url("img/yemian3.jpg");
+        }
+        #wrap #inner div:nth-child(10){
+            background-image: url("img/yemian4.jpg");
+        }*/
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--<div></div>-->
+        <!--<div></div>-->
+        <!--<div></div>-->
+        <!--<div></div>-->
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        $(window).mousedown(function (e){
+            var ber_x=e.pageX||e.clientX;
+            var ber_y=e.pageY||e.clientY;
+            var flag=true
+            $(window).mousemove(function (ev) {
+                if(flag){
+                var af_x = ev.pageX || ev.clientX;
+                var af_y = ev.pageY || ev.clientY;
+
+                var x = (af_x - ber_x)
+                var y = (af_y - ber_y)
+
+                $("#wrap #inner ").css({
+                    transform: " rotateY("+x+ "deg) rotateX("+y+ "deg)"
+                })
+            }
+            }).mouseup(function () {
+            flag=false
+        })
+        })
+
+        var i= $("#wrap #inner div").length;
+        $("#wrap #inner div").each(function (index,element) {
+            //度数  360/i*index
+            var d=(360/i)*index;
+            $(element).css({
+                "transform-origin":"100px",
+                transform:" rotateY("+d+"deg) translateZ(300px)",
+            })
+        })
+
+
+    init();
+    $(window).resize(function () {
+        init()
+    });
+    function init() {
+        //窗体的宽高
+        var bf_width=$(window).width();
+        var bf_height=$(window).height();
+        //窗口的宽高
+        var w_width=$("#wrap").width();
+        var w_height=$("#wrap").height();
+        //居中
+        var left_width=(bf_width-w_width)/2;
+        var top_height=(bf_height-w_height)/2;
+        $("#wrap").css({
+            left:left_width+"px",
+            top:top_height+"px"
+        })
+    }
+    })
+</script>
+</body>
+</html>
